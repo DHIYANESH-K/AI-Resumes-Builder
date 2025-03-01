@@ -12,8 +12,7 @@ export default function Home() {
             <div className="p-2 h-5 shrink-0 flex items-center text-xs justify-center text-white bg-primary rounded-full">
               New
             </div>
-            Subscribe to Techwithemma
-            <ChevronRight className="w-4 h-4" />
+            
           </div>
 
           <div className="flex flex-col mt-5 items-center text-center">
@@ -36,16 +35,7 @@ export default function Home() {
               <Button className="h-12 text-base font-medium min-w-32" asChild>
                 <RegisterLink>Get Started</RegisterLink>
               </Button>
-              <Button
-                variant="outline"
-                className="h-12  border-primary text-primary text-base font-medium min-w-32"
-                asChild
-              >
-                <a className="flex items-center gap-1">
-                  <Video size="17px" />
-                  Watch video
-                </a>
-              </Button>
+              
             </div>
           </div>
         </div>

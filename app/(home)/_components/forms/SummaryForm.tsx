@@ -144,7 +144,7 @@ const SummaryForm = (props: { handleNext: () => void }) => {
             onChange={handleChange}
           />
 
-          {aiGeneratedSummary && (
+          {/* {aiGeneratedSummary && (
             <div>
               <h5 className="font-semibold text-[15px] my-4">Suggestions</h5>
               {Object?.entries(aiGeneratedSummary)?.map(
@@ -170,7 +170,30 @@ const SummaryForm = (props: { handleNext: () => void }) => {
                 )
               )}
             </div>
-          )}
+          )} */}
+          {aiGeneratedSummary && (
+  <div>
+    <h5 className="font-semibold text-[15px] my-4">Suggestions</h5>
+    {aiGeneratedSummary.summaries?.map((item, index) => (
+      <Card
+        role="button"
+        key={index}
+        className="my-4 bg-primary/5 shadow-none border-primary/30"
+        onClick={() => handleSelect(item.summary)}
+      >
+        <CardHeader className="py-2">
+          <CardTitle className="font-semibold text-md">
+            {item.experienceLevel}
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="text-sm">
+          <p>{item.summary}</p>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+)}
+
 
           <Button
             className="mt-4"

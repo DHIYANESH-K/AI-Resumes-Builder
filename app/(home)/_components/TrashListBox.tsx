@@ -55,16 +55,16 @@ const TrashListBox = () => {
 
   return (
     <Popover>
-      <PopoverTrigger>
+      <PopoverTrigger asChild>
         <Button
           className="text-[15px] gap-[2px]
-           items-center"
+          items-center"
           variant="outline"
         >
           <Trash2 size="15px" />
           <span>All Trash</span>
         </Button>
-      </PopoverTrigger>
+  </PopoverTrigger>
       <PopoverContent
         className="bg-background 
         w-[22rem] !px-2"
